@@ -1,6 +1,11 @@
 
 # Created by https://www.gitignore.io/api/windows,visualstudio,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=windows,visualstudio,visualstudiocode
+### My own ###
+*.sln
+*.exe
+*.vcxproj
+*.filters
 
 ### VisualStudioCode ###
 .vscode/*
