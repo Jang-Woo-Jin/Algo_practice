@@ -12,7 +12,7 @@ int main() {
 	memset(table, -1, sizeof(int) * (K + 1));
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &coins[i]);
-		table[coins[i]] = 1;
+		if(coins[i] <= 10000) table[coins[i]] = 1;
 	}
 
 	for (int i = 2; i <= K; i++) {
