@@ -7,7 +7,7 @@ int main() {
 	scanf("%d", &num);
 
 	long long fibo[100];
-	memset(fibo, -1, 100);
+	memset(fibo, -1, sizeof(long long) * 100);
 
 	fibo[0] = 0; fibo[1] = 1;
 	for (int i = 2; i <= num; i++) {
