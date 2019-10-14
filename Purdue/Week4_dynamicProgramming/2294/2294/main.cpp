@@ -5,8 +5,8 @@
 
 int main() {
 	int N, K;
-	int coins[100] = { 0, };
-	int table[10000];
+	int coins[101] = { 0, };
+	int table[10001];
 	
 	scanf("%d %d", &N, &K);
 	memset(table, -1, sizeof(int) * (K + 1));
