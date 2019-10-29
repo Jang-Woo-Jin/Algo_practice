@@ -28,7 +28,7 @@ int main() {
 	visited[1] = true;
 	search(1, connections, visited, computer);
 	int answer = 0;
-	for (int i = 0; i < computer; i++) {
+	for (int i = 0; i <= computer; i++) {
 		if (visited[i]) answer++;
 	}
 	printf("%d", answer - 1);
