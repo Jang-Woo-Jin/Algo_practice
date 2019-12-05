@@ -15,17 +15,8 @@ int main() {
 	int answer = 0;
 	for(int i = 0; i < s.length(); i++){
 		if (s[i] >= 'a' && s[i] <= 'z') answer++;
-		for (int j = 0; j < 3; j++) {
-			if (s[i] == cro[j][index[j]]) {
-				index[j]++;
-				if (index[j] == cro[j].length()) {
-					answer--;
-					index[j] = 0;
-				}
-			}
-			else index[j] = 0;
-			
-		}
+		if (s[i] == 'j' && (s[i - 1] == 'n' || s[i - 1] == 'l')) answer--;
+		if (s[i] == 'z' && s[i - 1] == 'd' && s[i + 1] == '=') answer--;
 	}
 	printf("%d", answer);
 	return 0;
