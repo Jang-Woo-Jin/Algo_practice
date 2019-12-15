@@ -21,16 +21,20 @@ int main() {
 	for (int i = 0; i < B; i++) {
 		int c1, c2, fee;
 		scanf("%d %d %d", &c1, &c2, &fee);
-		path[c1][num[c1]] = c2;	
-		num[c1]++;
-		weight[c1][c2] = fee;
+		if (weight[c1][c2] == -1 || weight[c1][c2] > fee) {
+			if (weight[c1][c2] == -1) {
+				path[c1][num[c1]] = c2;
+				num[c1]++;
+			}
+			weight[c1][c2] = fee;
+		}
 	}
 	scanf("%d %d", &S, &E);
 
-	priority_queue<pair<int,int>> q;
+	priority_queue<pair<int, int>> q;
 	int distance[1001] = { 0, };
-	
-	
+
+
 	q.push(pair<int, int>(distance[S], S));
 
 	while (!q.empty()) {
